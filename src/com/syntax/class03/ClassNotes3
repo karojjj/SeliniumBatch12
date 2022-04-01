@@ -1,0 +1,137 @@
+DOM :document object model can be called HTML
+Why have so many locators? not all elements have them.
+Selenium class 3
+
+Why do we need Xpath and CSS Selector?
+-- developers will not provide all the locators in html
+-- by using xpath and css we can identify elements with any given attributes
+
+What is Xpath?
+-- xpath is like a query language which helps us to identify elements
+uniquely on the webpage.
+
+Types of Xpath:
+
+--Absolute xpath--> start from the starting node in html, always starts with the single (/)
+            e.g /html/body/div/div/div
+-- Relative Xpath--> starts from any node in the HTML
+             always starts with (//)
+Syntax Relative xPath:
+//tag-name[@attribute = 'attribute value']
+Example: //input[@id = 'email']
+
+Identifying elements by its text:
+//tagname[text() = 'text value']
+
+Examples:
+//a[text() = 'Create new account']
+//h2[text() = 'Connect with friends and the world around you on Facebook.']
+
+Identifying elements by using contains method
+//tagname[contains(@attribute, 'partial attribute value')]
+
+example on partial link:
+//input[contains(@placeholder,'Email')]
+
+Starts-with() will identify the element with partial starting value
+//tagname[starts-with(@attribute, 'partial starting attribute value']
+//button[starts-with(@data-testid,'royal')]
+
+ends-with was used in xpath 1.0, we are using 2.o and this method is not available
+
+<div> -- division
+<img> -- image
+<h> -- header
+<p> --paragraph
+<li> -- list
+<ul> -- unordered list
+<ol>-- ordered list
+
+Advanced Xpath
+is based on parent and child, sibling relationships
+
+identifying elements by following sibling
+//tagname[@attribute ='attribute value;]/following-sibling::tagname
+
+identifying elements by preceding siblings
+//input[@id = 'calFromDate']/following-sibling::img
+//span[text() = '& Orders']/preceding-sibling::span goes back
+
+identifying elements by parent
+//tagname[@attribute = 'attribute value']/parent::parentTagname
+//span[text() = '& Orders']/parent::a
+
+identifying an element by its ancestors
+//tagname[@attribute = 'attribute value']/ancestor::ancestor tagname
+
+identifying element by index
+(//img[@class = 'ui-datepicker-trigger'])[2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====Why do we need Xpath and Css selector?===
+developers will not provide all the locators in HTML
+by using xpath and css we can identify elements with given attributes
+What is XPATH?
+It is like a query language which helps us identify elements
+
+XPath in Selenium is an XML path used for navigation through the HTML structure of the page. It is a syntax or language
+for finding any element on a web page using XML path expression.
+XPath can be used for both HTML and XML documents to find the location of any element on a webpage using HTML DOM structure.
+
+Syntax for XPath selenium:
+
+XPath contains the path of the element situated at the web page. Standard XPath syntax for creating XPath is.
+
+Xpath=//tagname[@attribute='value']
+// : Select current node.
+Tagname: Tagname of the particular node.
+@: Select attribute.
+Attribute: Attribute name of the node.
+Value: Value of the attribute.
+To find the element on web pages accurately there are different types of locators:
+
+XPath Locators	Find different elements on web page
+ID	To find the element by ID of the element
+Classname	To find the element by Classname of the element
+Name	To find the element by name of the element
+Link text	To find the element by text of the link
+XPath	XPath required for finding the dynamic element and traverse between various elements of the web page
+CSS path	CSS path also locates elements having no name, class or ID.
+Types of X-path
+There are two types of XPath:
+
+Absolute XPath:
+It is the direct way to find the element, but the disadvantage of the absolute XPath is that if there are any changes
+made in the path of the element then that XPath gets failed.
+The key characteristic of XPath is that it begins with the single forward slash(/) ,which means you can select
+ the element from the root node.

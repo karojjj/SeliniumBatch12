@@ -1,0 +1,129 @@
+What is software testing?
+--identify the correctness and quality of the application
+How many ways can we actually test?
+=manual
+=automation
+when do we go for automation?
+-after manual testing is passed!
+-when environment is stable
+-analyze our test suite and choose our automation tools
+what automation tools do we know about?
+-Selenium, TestNG, Cucumber, Katalon Studio, UFT/QTP
+Level of testing ?
+1:Unit Testing
+-developers test
+2:Integration Testing
+3:Acceptance Testing
+Clients do the testing
+4:System Testing done by mostly high level managers
+TYPES OF TESTING:
+1-Functional Testing is:
+2-Non-functional Testing are
+----performance testing(how a system works under specific workloads)
+----security testing(how your system behaves when someone hacks your system)
+PS:we will test everything in test environment
+
+WHAT IS SELENIUM?
+It is a set of tools which help us to automate web applications.it is mainly used to perform functional testing
+SELENIUM COMPONENTS:
+Selenium IDE(Integrated development environment)
+Selenium GRID-Firefox plugin
+Selenium RC =remote control
+Selenium-WEB DRIVER
+Web driver is most updated the tool in the market
+
+What is selenium web driver?
+it is an open source automation tool(free) which allows us to perform actions on a web applications/web driver
+ is an interface
+ /The advantages of selenium WebDriver: it is open source means free. works with different browser and
+ support cross browsing testing
+ =works with different programming languages, such as java, javascript, python, ruby
+ =works with operating system like windows linux, ios, [OS independent]
+ DISADVANTAGES OF SELENIUM:
+=it works only web based application it is not work(test) for desktop application
+=it is open sources ,so it does not have technical support
+= when u run your scripts, there is not built in reports like feedbacks. there is no technical support
+=we can not test images, videos, captchas(
+
+get() vs navigate()
+--navigate can go back and forward and refresh
+--get() will wait for the page fully load whereas navigate() will not
+--get() will not keep the history of browser
+close() vs quit()
+--close() will close the current tab
+--quit() will quit the whole browser
+fullscreen() vs maximize()
+--maximize() will maximize the browser , and you will be able to see the control panel(back and forward, bookmark)
+
+--fullscreen() will  maximize the whole application
+Briefly;
+1. Set System Property
+System.setProperty(key, value)
+1. Instantiate objects and variables
+WebDriver driver=new ChromeDriver();
+1. Launch a Browser Session
+WebDriver's get() method is used to launch a new browser session and directs it to the URL that you specify as its
+parameter.
+1. Get the Actual Page Title
+The WebDriver class has the getTitle() method that is always used to obtain the page title of the currently loaded page.
+1. Terminate a Browser Session
+The "close()" method is used to close the browser window. get(String url);
+● Command launches a new browser and opens the specified URL in the browser instance
+● The command takes a single string type parameter that is usually a URL of application under test
+driver.get("https://google.com");
+//Or can be written as
+String URL = "https://google.com";
+driver.get(URL);
+========================================================================================================================
+➔ getTitle();
+● Command is used to retrieve the title of the webpage the user is currently working on.
+● A null string is returned if the webpage has no title
+● Command doesn’t require any parameter and returns a trimmed
+string value
+String title = driver.getTitle();
+========================================================================================================================
+close();
+● This method Close only the current window the WebDriver is currently controlling.
+● Accepts nothing as a parameter and returns nothing.
+● Quit the browser if it’s the last  window currently open. driver.close();
+ we execute our code with main method( public static void main(String[]args){}
+ ======================================================================================================================
+ quit();
+ ● This method Closes all windows  opened by the WebDriver.
+ ● Accepts nothing as a parameter and  returns nothing.
+ ● Close every associated window.======>>   driver.quit();
+ ======================================================================================================================
+ ➔ navigate().to(String url);
+ ● This method Loads a new web page in the current browser  window. It accepts a String parameter and returns nothing.
+ ● It does exactly the same thing as the driver.get(String url)  method.
+ ● Able to redirect from the current web page to the expected  web page.
+ driver.navigate().to("https://www.google.com");
+ =======================================================================================================================
+ ➔ navigate().refresh();
+ ● This method Refresh the current page. It neither accepted nor  returns anything.
+ ● Perform the same function as pressing F5 in the browser. ===>   driver.navigate().refresh();
+ ======================================================================================================================
+ WebDriver Navigation Commands
+ ➔ 1.navigate().forward();
+ ● This method does the same operation as clicking on the Forward Button of   any browser.
+ ● It neither accept nor returns anything.
+ ● Takes you forward by one page on the browser’s history.==>  driver.navigate().forward();
+
+ ➔ 2.driver.navigate().back();
+ ● This method does the same operation  as clicking on the Back Button of any browser.
+ ● It neither accepted nor returns anything.
+ ● Takes you back by one page on the browser’s history.===>   driver.navigate().back();
+
+ ======================================================================================================================
+Difference Between get() and navigate()
+ driver.get("URL") :
+ driver.get("http://www.google.com");
+ It's used to go to the particular website , But it doesn't maintain the browser History and  cookies, we can't use
+ forward and backward button , if  we click on that , page will not get schedule. it is used to navigate particular
+ URL(website) and wait till page load.
+
+ driver.navigate().to("URL"):
+ driver.navigate().to("http://www.google.com");
+ It's used to go to the particular website , but it maintains the browser history and cookies, we can use forward and
+  backward button to navigate between the pages during the coding of Testcase is used to navigate to particular URL
+   and does  not wait to page load

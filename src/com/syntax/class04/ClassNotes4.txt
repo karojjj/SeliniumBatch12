@@ -1,0 +1,86 @@
+Selenium Class 4
+CSS SELECTOR: (Cascading Style Sheet)==>it is another way to locating elements on the web page.
+Identifies web elements based on html structure
+Syntax==>    tagname[attribute='attribute value']
+facebook example for login ;
+button[type='submit']
+========================================================================================================================
+++CSS does not give an opportunity to locate the element by its text
+========================================================================================================================
+shortcuts for CSS:
+
+SHORTCUT FOR CLASSNAME==> "."
+Syntax==> tagname.classNameValue
+example==> input.button
+========================================================================================================================
+Shortcut for ID ==> "#"
+Syntax==> tagname#IDValue
+example==> input#twotabsearchtextbox
+========================================================================================================================
+Contains() method in CSS:
+*(star) symbol represents contains method
+Syntax ==> tagname[attribute *='attribute value']
+Example : input[placeholder *='Email or phone number']
+========================================================================================================================
+starts-with method in CSS:
+^(Circumflex) symbol represents starts with method
+Syntax ==> tagname[attribute ^= 'starting attribute value']
+Example==>      input[type ^='pass']
+========================================================================================================================
+ends-with method in CSS:
+$ symbol represents ends-with method in CSS
+Syntax==> tagname[attribute $= 'ending attribute value']
+img[src $= 'syntax.png']
+==========================what is difference between  CSS and XPATH?===================================================
+The primary difference between XPath and CSS selectors is that with the XPath we can traverse both forward and
+backward, whereas a CSS selector only moves forward.XPath enables bidirectional flow, meaning the traversal may go
+both ways – from child to parent and parent to child. On the contrary, CSS enables one-directional flow, so the
+traversal works only from parent to child. Concerning speed and performance, XPath is slower, and CSS is a better
+ choice in terms of speed and performance.
+
+1.CSS can not locate elements by text where as xpath can
+2.no ends-with method in xpath
+3.css faster (by finding element than)  xpath
+4.css has shortcuts which xpath does not have
+5.no advanced CSS
+6.CSS has more simple syntax than xpath
+========================================Advantages of Using CSS Selectors:==============================================
+                                        Faster than XPath
+                                        Easier to learn and use than XPath
+                                        More likely to find desired item
+========================================================================================================================
+WebElement Commands:
+
+consists of several methods where we can perform an action anf get the element state on the webpage
+isEnabled()-- boolean value
+isDisplayed()--boolean value
+isSelected()-- boolean value
+clear()--void
+getText()--String value
+getAttribute()--String value
+submit()--void
+========================================================================================================================
+NOTES: How to maximize web page ?
+driver.manage().window().maximize();
+driver.manage().window().fullscreen();
+driver.get(URL); method is used to navigate to particular URL and will wait until page is loaded
+driver.navigate.to(URL): method is used to navigate to particular URL and will not wait until the page is loaded and
+it maintains the browser history and cookies so we can use forward and backward functions to navigate the between pages
+ during execution of scripts.
+driver.close(); will close current  window that webdriver is controlling
+driver.quit()l will close ALL THE WINDOWS by opened by WebDriver
+driver.navigate().back(); is used to navigate page backward
+driver.navigate().forward(); is used to navigate page forward
+driver.navigate().refresh(); is used to refresh the page
+
+
+
+
+
+
+
+
+
+
+
+

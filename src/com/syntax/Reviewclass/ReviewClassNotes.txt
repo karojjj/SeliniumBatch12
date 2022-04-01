@@ -1,0 +1,53 @@
+navigate provides the opprt to go back and forward. navigate does not fully wait for it to load
+driver.navigate.to("https://www.gmail.com");
+driver.quit(); //it will close whole browser
+driver.close(); //it will close current browser
+
+WHY WE NEED SELENIUM?
+Identify corrections and quality off application. it is a tool to automate the web.
+HTML: [HyperText Markup Language] HTML is the standard markup language for creating Web pages.
+What is HTML?
+HTML stands for Hyper Text Markup Language
+HTML is the standard markup language for creating Web pages
+HTML describes the structure of a Web page
+HTML consists of a series of elements
+HTML elements tell the browser how to display the content
+HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+What are web elements?
+ANything on the web page it is a web element.
+Why do we need to access these elements?
+to PERFORM CERTAIN ACTIONS and test them
+there are 8 types of locators
+1-id
+2-name
+3-className
+4TagName
+5-LinkText
+6-PartialLinkText
+7.XPATH
+8. CSS Selector
+> Advanced Xpath:
+   get to the nearest sibling, parent, or ancestor first and the have access to the desired tag
+
+    Use URL: https://syntaxprojects.com/basic-first-form-demo.php
+
+   - to find following sibling:
+   //tag[@attribute='value']/following-sibling::following-tagname
+   //label[text()='Enter message']/following-sibling::input
+
+   - to find preceding sibling:
+   //tag[@attribute='value']/preceding-sibling::preceding-tagname
+   //input[@id="user-message"]/preceding-sibling::label
+
+   - to find ancestor of a tag
+   hey get me tag with name "label" with the text "Enter message" and then get me it's ancestor "form"
+   //ancestor-tag[@attribute='value']/ancestor::child-tagname
+
+   //form[@id='user-message']/ancestor::input
+
+   - to find parent of a tag
+      //parent-tag[@attribute='value']/parent::child-tagname
+      //div[@class='class-abc']/ancestor::input
+========================================================================================================================
+
+

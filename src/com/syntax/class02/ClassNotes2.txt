@@ -1,0 +1,36 @@
+----------------------------------------------What is a WebElement-----------------------------------------------------
+WebElements are anything we see on the page are elements, images, buttons, textbooks, checkboxes, links,
+we will locate in these elements.
+-----------------------------------what is HTML and what stand for? ---------------------------------------------------
+Hypertext markup language
+what is DOM? it stands for Document Object Model. it is the browser's internal view of the webpage.Also called as
+Developer's tools ot Dev tools.
+open the page, right click then select "inspect"
+Document--> can be stored any document such as pdf, excel
+Object--> any line in HTML is considered as Object
+Model--> it is a just a layout of HTML
+----------------------------------------What is locator?----------------------------------------------------------------
+==it is an address or position of a web element on the web page.
+==it is used to locate or identify web elements on the web page
+there are 8 locators
+1.ID
+2.Name
+3.TagName
+4.Xpath
+5.LinkText
+6.PartialLinktext
+7.CSS Selector
+8.Classname
+HTML Scripting meaning:
+purple color mean --tags || button, input, div...
+brown color mean-- attributes || names, class, id ...
+blue-->attribute value ||
+--------------------------------why do we need so many locators?--------------------------------------------------------
+-developers may not provide all the locators for all the elements
+-some locators may have duplicate values in different notes
+-some locators may not be applicable for the element we are looking for .for example linkText and PartialLinkText are
+only used for links
+"a" tag is also called an anchor tag
+
+
+if two or more elements same attributes and attribute value selenium will only interact first element it locates

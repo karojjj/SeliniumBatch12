@@ -1,0 +1,15 @@
+Three ways to switch windows
+1. driver.switchTo().window("windowName");
+2.driver.switchTo.frame("frameName");
+3.driver.switchTo.alert();
+
+<html>
+     <body>
+            <h1>hello<h1>
+            <h1>
+            <p1>well though<p1>
+            <h1>
+            <h1>hiwert<h1>
+
+
+            html/body/h1
